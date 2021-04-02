@@ -1,0 +1,10 @@
+{{/*
+NOTICE: Copyright 2021 Talend SA, Talend, Inc., and affiliates. All Rights Reserved. Customer’s use of the software contained herein is subject to the terms and conditions of the Agreement between Customer and Talend.
+*/}}
+
+{{ $tryInTesterContext := .tryInTesterContext -}}
+{{ $operationId := .operationId -}}
+{{ $className := .className -}}
+
+{{ with $tryInTesterContext }}<button class="try-in-tester btn btn--primary btn-as-link {{$className}}" {{ with $operationId -}} data-operation-id="{{ . }}" {{ end -}} type="button">{{ i18n "try-in-api-tester" }}</button>{{ end -}}
+
